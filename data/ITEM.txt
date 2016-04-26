@@ -6,7 +6,7 @@
 4,FEATHER_SUIT,35,80,ARMOR,0,3,0,0,0,A suit that's easily to wear.
 5,HERB,4,10,CONSUMABLE,0,0,4,0,0,The plant use for wound healing.
 6,RING,10,15,ARMOR,0,1,0,NULL,0,The ring of protection.
-7,GREEN_SOLUTION,5,15,CONSUMABLE,0,0,0,5,0,The water form Chumeang for healing.
+7,GREEN_SOLUTION,5,15,CONSUMABLE,0,0,5,0,0,The water form Chumeang for healing.
 8,BLADE,15,30,WEAPON,1,0,0,0,2,The small knife that is very sharp.
 9,PEN_GUN,40,80,WEAPON,5,0,0,0,5,The small gun that made form pen.
 10,SPARE,30,60,WEAPON,4,0,0,0,2,The Long Knife for stab.

@@ -235,7 +235,7 @@ void GAME::chapter1(int session){
 			getline(cin,enter);
 			cout <<  "\n\tSee injured man with monster around.";
 			getline(cin,enter);
-			Battle = new battle(getPlayer(),5);
+			Battle = new battle(getPlayer(),4);
 			nextSubPt();
 			notBusy();
 			show::clear();
