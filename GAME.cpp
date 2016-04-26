@@ -166,7 +166,7 @@ void GAME::chapter1(int session){
 			cout << "\t"<<PLAYER.getName() << ": I will kill you all.";
 			getline(cin,enter); 
 			
-			Battle = new battle(getPlayer(),3);
+			Battle = new battle(getPlayer(),4);
 			
 			busy();
 			nextSubPt();
@@ -235,6 +235,7 @@ void GAME::chapter1(int session){
 			getline(cin,enter);
 			cout <<  "\n\tSee injured man with monster around.";
 			getline(cin,enter);
+			Battle = new battle(getPlayer(),5);
 			nextSubPt();
 			notBusy();
 			show::clear();
