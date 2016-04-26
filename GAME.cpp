@@ -814,7 +814,7 @@ void GAME::chapter3(int session){
 			cout << "\tThe Story of Hero become a Legend Forever.";
 			getline(cin,enter);
 			show::printData(core);
-			cout << "\tFin.";
+			cout << "\n\n\tFin.";
 			getline(cin,enter);
 			nextMainPt();
 			setSubPt(1);

@@ -129,6 +129,15 @@ int GAME::eventCheck(int dest){
 			}
 		}
 	}
+	if(dest == 16|| dest == 19||dest == 22){
+		this->SAVE();
+	}
+	if(dest == 17|| dest == 20||dest == 23){
+		this->SHOP();
+	}
+	if(dest == 18|| dest == 21||dest == 24){
+		this->HOSPITAL();
+	}
 	return 1;
 }
 
@@ -138,4 +147,29 @@ void GAME::engaging(){
 		n = rand()%n;
 		Battle = new battle(getPlayer(),getPlayer()->getACode().getMonsterList()->at(n));
 	}
+}
+
+bool GAME::start(){
+	string cmd ="";
+	show::printLogo();
+	
+	cout<<endl<<endl<<endl;
+	cout<<"\t[1]  Start a new game\n\n";
+	cout<<"\t[2]  Load game\n\n\n";
+	do{
+		cout<<"\tCOMMAND: ";
+		getline(cin,cmd);
+	}while(!(cmd == "1"||cmd =="2"));
+	
+	return true;
+}
+
+void GAME::SHOP(){
+	
+}
+void GAME::SAVE(){
+	
+}
+void GAME::HOSPITAL(){
+	
 }

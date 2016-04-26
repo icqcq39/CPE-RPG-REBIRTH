@@ -54,6 +54,13 @@ Place load::getPlaceData(int placeID){
 	return placeData[placeID];
 }
 
+vector<Shop>* load::getShopData(){
+	return &shopData;
+}
+Shop getShopData(int shopID){
+	return shopData[shopID];
+}
+
 void load::loadItemData(){
 	ifstream src;
 	src.open("data/ITEM.txt");
@@ -349,27 +356,27 @@ void show::printOver(){
 	show::clear();
 	cout<<endl<<endl<<endl;
 
-cout<<"   $$$$$$\\   $$$$$$\\  $$\\      $$\\ $$$$$$$$\\ "<<endl;
-cout<<"  $$  __$$\\ $$  __$$\\ $$$\\    $$$ |$$  _____|"<<endl;
-cout<<"  $$ /  \\__|$$ /  $$ |$$$$\\  $$$$ |$$ |      "<<endl;
-cout<<"  $$ |$$$$\\ $$$$$$$$ |$$\\$$\\$$ $$ |$$$$$\\    "<<endl;
-cout<<"  $$ |\\_$$ |$$  __$$ |$$ \\$$$  $$ |$$  __|   "<<endl;
-cout<<"  $$ |  $$ |$$ |  $$ |$$ |\\$  /$$ |$$ |      "<<endl;
-cout<<"  \\$$$$$$  |$$ |  $$ |$$ | \\_/ $$ |$$$$$$$$\\ "<<endl;
-cout<<"   \\______/ \\__|  \\__|\\__|     \\__|\\________|"<<endl;
-cout<<"                                             "<<endl;
-cout<<"                                             "<<endl;
-cout<<"                                             "<<endl;
-cout<<"   $$$$$$\\  $$\\    $$\\ $$$$$$$$\\ $$$$$$$\\    "<<endl;
-cout<<"  $$  __$$\\ $$ |   $$ |$$  _____|$$  __$$\\  "<<endl;
-cout<<"  $$ /  $$ |$$ |   $$ |$$ |      $$ |  $$ |  "<<endl;
-cout<<"  $$ |  $$ |\\$$\\  $$  |$$$$$\\    $$$$$$$  |  "<<endl;
-cout<<"  $$ |  $$ | \\$$\\$$  / $$  __|   $$  __$$<   "<<endl;
-cout<<"  $$ |  $$ |  \\$$$  /  $$ |      $$ |  $$ |  "<<endl;
-cout<<"   $$$$$$  |   \\$  /   $$$$$$$$\\ $$ |  $$ |  "<<endl;
-cout<<"   \\______/     \\_/    \\________|\\__|  \\__|  "<<endl;
-cout<<"                                             "<<endl;
-cout<<"                                             "<<endl;
+cout<<"\t\t   $$$$$$\\   $$$$$$\\  $$\\      $$\\ $$$$$$$$\\ "<<endl;
+cout<<"\t\t  $$  __$$\\ $$  __$$\\ $$$\\    $$$ |$$  _____|"<<endl;
+cout<<"\t\t  $$ /  \\__|$$ /  $$ |$$$$\\  $$$$ |$$ |      "<<endl;
+cout<<"\t\t  $$ |$$$$\\ $$$$$$$$ |$$\\$$\\$$ $$ |$$$$$\\    "<<endl;
+cout<<"\t\t  $$ |\\_$$ |$$  __$$ |$$ \\$$$  $$ |$$  __|   "<<endl;
+cout<<"\t\t  $$ |  $$ |$$ |  $$ |$$ |\\$  /$$ |$$ |      "<<endl;
+cout<<"\t\t  \\$$$$$$  |$$ |  $$ |$$ | \\_/ $$ |$$$$$$$$\\ "<<endl;
+cout<<"\t\t   \\______/ \\__|  \\__|\\__|     \\__|\\________|"<<endl;
+cout<<"\t\t                                             "<<endl;
+cout<<"\t\t                                             "<<endl;
+cout<<"\t\t                                             "<<endl;
+cout<<"\t\t   $$$$$$\\  $$\\    $$\\ $$$$$$$$\\ $$$$$$$\\    "<<endl;
+cout<<"\t\t  $$  __$$\\ $$ |   $$ |$$  _____|$$  __$$\\  "<<endl;
+cout<<"\t\t  $$ /  $$ |$$ |   $$ |$$ |      $$ |  $$ |  "<<endl;
+cout<<"\t\t  $$ |  $$ |\\$$\\  $$  |$$$$$\\    $$$$$$$  |  "<<endl;
+cout<<"\t\t  $$ |  $$ | \\$$\\$$  / $$  __|   $$  __$$<   "<<endl;
+cout<<"\t\t  $$ |  $$ |  \\$$$  /  $$ |      $$ |  $$ |  "<<endl;
+cout<<"\t\t   $$$$$$  |   \\$  /   $$$$$$$$\\ $$ |  $$ |  "<<endl;
+cout<<"\t\t   \\______/     \\_/    \\________|\\__|  \\__|  "<<endl;
+cout<<"\t\t                                             "<<endl;
+cout<<"\t\t                                             "<<endl;
 }
 void show::printFight(){
 	show::printData(core);
@@ -387,3 +394,17 @@ cout<<"\t                                                  "<<endl;
 
 }
 
+void show::AEnd(){
+	show::printLogo();
+		cout<<endl<<endl<<endl;
+	cout<<"\tKITTIPHOL GANJINA  [580610619]\n\n";	
+	cout<<"\tCHALITPHOL CHUENSUWA  [580610630]\n\n";
+	cout<<"\tDARUNPHOP PENGKHAMTA  [580610642]\n\n";
+	cout<<"\tPHUMIPHAT CHIRAPIRIYAKUL  [580610667]\n\n";
+	getch();
+}
+
+void show::BEnd(){
+	show::printOver();
+	getch();
+}

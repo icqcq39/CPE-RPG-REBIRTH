@@ -7,6 +7,7 @@ vector<passive> passiveData;
 vector<attack> attackData;
 vector<monsterMove> monAttackData;
 vector<Place> placeData;
+vector<Shop> shopData;
 GAME* core;
 battle* Battle;
 
@@ -17,6 +18,7 @@ int main(){
 //	show::printLogo();
 //	show::printOver();
 
+	core->start();
 	for(int i=3;i<10;i++){
 		core->getPlayer()->addItem(i);
 	}
@@ -33,9 +35,11 @@ int main(){
 		if(core->getFree())core->console();
 	}while(core->getGStatus() != "GAMEOVER");
 	
-	
-
-
+	if(core->getMainPt()==7){
+		show::AEnd();
+	}else{
+		show::BEnd();
+	}
 	return 0;
 }//	getch();
 

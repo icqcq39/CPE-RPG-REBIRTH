@@ -1,0 +1,2 @@
+//ID,SHOP_ID,[ITEM_ID,]
+0,0,[0,]

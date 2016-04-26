@@ -34,6 +34,9 @@ class GAME{
 		void goTo(int);
 		int eventCheck(int);
 		void engaging();
+		void SHOP();
+		void SAVE();
+		void HOSPITAL();
 		
 		void chapter0();
 		void chapter1(int);

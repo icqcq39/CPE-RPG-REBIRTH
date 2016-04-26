@@ -29,6 +29,9 @@ namespace load{
 	vector<Place>* getPlaceData();
 	Place getPlaceData(int);
 	
+	vector<Shop>* getShopData();
+	Shop getShopeData(int);
+	
 	void loadItemData();
 	void loadMonsterData();
 	void loadSkillData();
@@ -36,6 +39,7 @@ namespace load{
 	void loadAttackData();
 	void loadMonAttackData();
 	void loadPlaceData();
+	void loadShopData();
 	void loadData();
 	
 	
@@ -47,7 +51,8 @@ namespace show{
 	void printLogo();
 	void printOver();
 	void printFight();
-	
+	void AEnd();
+	void BEnd();
 }
 
 #endif
