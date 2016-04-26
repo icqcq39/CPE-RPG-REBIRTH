@@ -57,9 +57,17 @@ Place load::getPlaceData(int placeID){
 vector<Shop>* load::getShopData(){
 	return &shopData;
 }
-Shop getShopData(int shopID){
+Shop load::getShopData(int shopID){
 	return shopData[shopID];
 }
+Shop load::getShopDataByPlace(int acode){
+	for(int i=0; i<load::getShopData()->size();i++){
+		if(acode == load::getShopData()->at(i).getShopID()){
+			return load::getShopData()->at(i);
+		}
+	}
+}
+
 
 void load::loadItemData(){
 	ifstream src;
@@ -295,6 +303,27 @@ void load::loadPassiveData(){
 	}
 }
 
+void load::loadShopData(){
+	ifstream src;
+	src.open("data/SHOP.txt");
+	string line;
+	while(getline(src, line)){// .substr(0,textline.find_first_of(':'))
+		if(line.substr(0,line.find_first_of('/')+1) != "/"){
+		
+			Shop *obj = new Shop();
+			int id = atoi( line.substr(0,line.find_first_of(',')).c_str() );
+			line = line.substr(line.find_first_of(',')+1,line.find_first_of('\0'));
+			int sid = atoi( line.substr(0,line.find_first_of(',')).c_str() );
+			line = line.substr(line.find_first_of(',')+1,line.find_first_of('\0')); // [x,x,],[y,y,]
+			string slist = line.substr(0,line.find_first_of('\0'));
+
+			obj->setAll(id,sid,slist);
+
+			load::addData(load::getShopData(),*obj);
+		}
+	}
+}
+
 void load::loadData(){
 	cout <<"Now loading ItemData\n";
 	load::loadItemData();
@@ -323,6 +352,10 @@ void load::loadData(){
 	cout <<"Now loading PassiveData\n";
 	load::loadPassiveData();
 	cout <<"PassiveData loading success\n\n";
+	
+	cout <<"Now loading ShopData\n";
+	load::loadShopData();
+	cout <<"ShopData loading success\n\n";
 }
 
 void show::clear(){

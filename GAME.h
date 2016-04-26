@@ -37,6 +37,8 @@ class GAME{
 		void SHOP();
 		void SAVE();
 		void HOSPITAL();
+		void BUY();
+		void SELL();
 		
 		void chapter0();
 		void chapter1(int);

@@ -12,6 +12,10 @@ class Shop{
 		void setID(int);
 		void setShopID(int);
 		void addItem(int);
+		void setSellList(string);
+		void setAll(int,int,string);
+		
+		void printSellList();
 	private:
 		int ID;
 		int shopID;

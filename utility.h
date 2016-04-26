@@ -30,7 +30,8 @@ namespace load{
 	Place getPlaceData(int);
 	
 	vector<Shop>* getShopData();
-	Shop getShopeData(int);
+	Shop getShopData(int);
+	Shop getShopDataByPlace(int);//ACODE
 	
 	void loadItemData();
 	void loadMonsterData();

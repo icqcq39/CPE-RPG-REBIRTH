@@ -165,11 +165,71 @@ bool GAME::start(){
 }
 
 void GAME::SHOP(){
-	
+	string cmd;
+	show::printData(core);
+	cout<<"\tWelcome ,Would you like to BUY or SELL\n\n";
+	do{
+		cout<<"\t[1]  BUY\n\n";
+		cout<<"\t[2]  SELL\n\n\n";
+		do{
+			cout<<"\tCOMMAND: ";
+			getline(cin,cmd);
+		}while(!(cmd == "1"||cmd =="2"));
+		if(cmd=="1"){
+			this->BUY();
+		}else{
+			this->SELL();
+		}
+		show::printData(core);
+		cout <<"\n\tDo you want to do any things else?\n\n";
+		cout<<"\t[1]  YES\n\n";
+		cout<<"\t[2]  NO, THANKS\n\n\n";
+		cout<<"\tCOMMAND: ";
+		getline(cin,cmd);
+		show::printData(core);
+	}while(!(cmd =="2"));
+	show::printData(core);
+	cout<<"\tThanks for coming.\n";
+	getch();
 }
 void GAME::SAVE(){
 	
 }
 void GAME::HOSPITAL(){
+	
+}
+void GAME::BUY(){
+	string cmd;
+	
+	do{
+		show::printData(core);
+		cout<<"\tWhat do you want to BUY.\n\n";
+		cout<<endl;
+		load::getShopDataByPlace(getPlayer()->getACode().getID()).printSellList();
+		do{
+			cout<<"\tCOMMAND: ";
+			getline(cin,cmd);
+		}while(!( atoi(cmd.c_str()) >= 0 && atoi(cmd.c_str()) < load::getShopDataByPlace(getPlayer()->getACode().getID()).getSellList()->size()) );
+		show::printData(core);
+		if(getPlayer()->getGold() >= load::getShopDataByPlace(getPlayer()->getACode().getID()).getSellList()->at(atoi(cmd.c_str())).getPB()){
+			cout<<"\tYou have bought "<< load::getShopDataByPlace(getPlayer()->getACode().getID()).getSellList()->at(atoi(cmd.c_str())).getName()<<"\n";
+			getPlayer()->addGold(0-load::getShopDataByPlace(getPlayer()->getACode().getID()).getSellList()->at(atoi(cmd.c_str())).getPB());
+			getPlayer()->addItem(load::getShopDataByPlace(getPlayer()->getACode().getID()).getSellList()->at(atoi(cmd.c_str())).getID());
+		}else{
+			cout << "\n\tSorry, You dont have enough money.\n";
+		}
+		getch();
+		show::printData(core);
+		cout <<"\n\tDo you want to buy any things else?\n\n";
+		cout<<"\t[1]  YES\n\n";
+		cout<<"\t[2]  NO, THANKS\n\n\n";
+		cout<<"\tCOMMAND: ";
+		getline(cin,cmd);
+		show::printData(core);
+	}while(!(cmd =="2"));
+	show::printData(core);
+	getch();
+}
+void GAME::SELL(){
 	
 }
