@@ -7,6 +7,7 @@
 #include "item.h"
 #include "shop.h"
 #include "skill.h"
+#include "SAVE.h"
 #include "passive.h"
 #include "attack.h"
 #include "monster.h"
@@ -25,6 +26,7 @@ extern vector<attack> attackData;
 extern vector<monsterMove> monAttackData;
 extern vector<Place> placeData;
 extern vector<Shop> shopData;
+extern vector<SAVE> saveData;
 
 extern GAME* core;
 extern battle* Battle;

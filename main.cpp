@@ -8,6 +8,7 @@ vector<attack> attackData;
 vector<monsterMove> monAttackData;
 vector<Place> placeData;
 vector<Shop> shopData;
+vector<SAVE> saveData;
 GAME* core;
 battle* Battle;
 

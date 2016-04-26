@@ -11,9 +11,9 @@ class SAVE{
 		int getStory(int);
 		int getAcode();
 		int getGold();
-		vector<Item>* getItemList;
-		vector<skill>* getSkillList;
-		int getPassiveId;
+		vector<Item>* getItemList();
+		vector<skill>* getSkillList();
+		int getPassiveId();
 		int getWeapon();
 		int getArmor();
 		
@@ -22,13 +22,15 @@ class SAVE{
 		void setStory(string);
 		void setPlayer(string);
 		void setAcode(int);
-		void setGolde(int);
+		void setGold(int);
 		void addItemList(int);
 		void addSkillList(int);
 		void setPassive(int);
 		void setWeapon(int);
 		void setArmor(int);
-		void setAll(int,string,sting,string,int,int,string,string,int,int,int);
+		void setItemList(string);
+		void setSkillList(string);
+		void setAll(int,string,string,string,int,int,string,string,int,int,int);
 	
 	private:
 		int ID;

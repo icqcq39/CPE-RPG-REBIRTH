@@ -68,6 +68,13 @@ Shop load::getShopDataByPlace(int acode){
 	}
 }
 
+vector<SAVE>* load::getSaveData(){
+	return &saveData;
+}
+SAVE load::getSaveData(int saveID){
+	return saveData[saveID];
+}
+
 
 void load::loadItemData(){
 	ifstream src;
@@ -324,6 +331,44 @@ void load::loadShopData(){
 	}
 }
 
+void load::loadSaveData(){
+	ifstream src;
+	src.open("data/SAVE.txt");
+	string line;
+	while(getline(src, line)){// .substr(0,textline.find_first_of(':'))
+		if(line.substr(0,line.find_first_of('/')+1) != "/"){
+		
+			SAVE *obj = new SAVE();
+			int id = atoi( line.substr(0,line.find_first_of(',')).c_str() );
+			line = line.substr(line.find_first_of(',')+1,line.find_first_of('\0'));
+			string name = line.substr(0,line.find_first_of(','));
+			line = line.substr(line.find_first_of(',')+1,line.find_first_of('\0')); // [x,x,],[y,y,]
+			string story = line.substr(0,line.find_first_of(']')+1);
+			line = line.substr(line.find_first_of(']')+2,line.find_first_of('\0')); // [y,y,]
+			string player = line.substr(0,line.find_first_of(']')+1);
+			line = line.substr(line.find_first_of(']')+2,line.find_first_of('\0'));
+			int ac = atoi( line.substr(0,line.find_first_of(',')).c_str() );
+			line = line.substr(line.find_first_of(',')+1,line.find_first_of('\0'));
+			int g = atoi( line.substr(0,line.find_first_of(',')).c_str() );
+			line = line.substr(line.find_first_of(',')+1,line.find_first_of('\0'));
+			string itP = line.substr(0,line.find_first_of(']')+1);
+			line = line.substr(line.find_first_of(']')+2,line.find_first_of('\0'));
+			string skP = line.substr(0,line.find_first_of(']')+1);
+			line = line.substr(line.find_first_of(']')+2,line.find_first_of('\0'));
+			int p = atoi( line.substr(0,line.find_first_of(',')).c_str() );
+			line = line.substr(line.find_first_of(',')+1,line.find_first_of('\0'));
+			int w = atoi( line.substr(0,line.find_first_of(',')).c_str() );
+			line = line.substr(line.find_first_of(',')+1,line.find_first_of('\0'));
+			int a = atoi( line.substr(0,line.find_first_of('\0')).c_str() );
+
+
+			obj->setAll(id,name,story,player,ac,g,itP,skP,p,w,a);
+
+			load::addData(load::getSaveData(),*obj);
+		}
+	}
+}
+
 void load::loadData(){
 	cout <<"Now loading ItemData\n";
 	load::loadItemData();
@@ -356,6 +401,10 @@ void load::loadData(){
 	cout <<"Now loading ShopData\n";
 	load::loadShopData();
 	cout <<"ShopData loading success\n\n";
+	
+	cout <<"Now loading SaveData\n";
+	load::loadSaveData();
+	cout <<"SaveData loading success\n\n";
 }
 
 void show::clear(){

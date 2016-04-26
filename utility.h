@@ -33,6 +33,9 @@ namespace load{
 	Shop getShopData(int);
 	Shop getShopDataByPlace(int);//ACODE
 	
+	vector<SAVE>* getSaveData();
+	SAVE getSaveData(int);
+	
 	void loadItemData();
 	void loadMonsterData();
 	void loadSkillData();
@@ -41,6 +44,7 @@ namespace load{
 	void loadMonAttackData();
 	void loadPlaceData();
 	void loadShopData();
+	void loadSaveData();
 	void loadData();
 	
 	
