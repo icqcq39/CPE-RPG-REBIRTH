@@ -4,19 +4,19 @@
 2,NO_ARMOR,0,0,ARMOR,0,0,0,0,0,You should find some armor to wear.
 3,DAGGER,25,50,WEAPON,2,0,0,0,2,A knife with a very sharp point.
 4,FEATHER_SUIT,35,80,ARMOR,0,3,0,0,0,A suit that's easily to wear.
-5,HERB,4,10,CONSUMABLE,0,0,0,4,0,The plant use for wound healing.
+5,HERB,4,10,CONSUMABLE,0,0,4,0,0,The plant use for wound healing.
 6,RING,10,15,ARMOR,0,1,0,NULL,0,The ring of protection.
 7,GREEN_SOLUTION,5,15,CONSUMABLE,0,0,0,5,0,The water form Chumeang for healing.
 8,BLADE,15,30,WEAPON,1,0,0,0,2,The small knife that is very sharp.
 9,PEN_GUN,40,80,WEAPON,5,0,0,0,5,The small gun that made form pen.
 10,SPARE,30,60,WEAPON,4,0,0,0,2,The Long Knife for stab.
 11,RED_FLOWER,15,30,WEAPON,1,0,0,0,4,The fire that look like a beautiful flower.
-12,MANGO,2,5,CONSUMABLE,0,0,0,0,0,A fruit use that is full of energy.
+12,MANGO,2,5,CONSUMABLE,0,0,3,0,0,A fruit use that is full of energy.
 13,SHELL,10,15,WEAPON,1,0,0,0,2,The sharp shell form the Angkeaw.
 14,B_AXE,200,0,WEAPON,10,5,0,3,0,The giant axe droped by Behemoth.
 15,HORSE_SHOE,20,0,ETC,0,0,0,0,0,A horse shoe.
-16,CANDY,5,15,CONSUMABLE,0,0,0,5,0,A candy is so sweet.
-17,PILL,20,40,CONSUMABLE,0,0,0,20,0,A medicine form hospital.
+16,CANDY,5,15,CONSUMABLE,0,0,5,0,0,A candy is so sweet.
+17,PILL,20,40,CONSUMABLE,0,0,20,0,0,A medicine form hospital.
 18,BROKEN_KNIFE,25,0,ETC,0,0,0,0,0,A broken knife can't equipe to weapon.
 19,RUSTY_SWORD,30,0,ETC,0,0,0,0,0,A rusty sword can't equipe to weapon.
 20,HANDY_SWORD,40,0,WEAPON,5,0,0,0,2,A small blade easy to use.
@@ -24,7 +24,7 @@
 22,MACE,50,0,WEAPON,7,0,0,0,7,A hammer used by orc. 
 23,AP_WAND,450,0,WEAPON,15,0,5,0,8,A magic rod drop by Apocarypse.
 24,DARK_SWORD,450,0,WEAPON,15,2,0,0,5,A cruse sword of dark soldier.
-25,WATER,10,20,CONSUMABLE,0,0,0,10,0,A fresh water form the sky.
+25,WATER,10,20,CONSUMABLE,0,0,5,2,0,A fresh water form the sky.
 26,LASER,40,80,WEAPON,6,0,0,0,0,The light can cuting everything.
 27,FLOWER,10,0,ETC,0,0,0,0,0,A real beautiful flower.
 28,HONEY,40,0,ETC,0,0,0,0,0,The sweet water form bees.
@@ -32,7 +32,7 @@
 30,BLADE_STONE,30,60,WEAPON,4,0,0,0,2,The blade that strong like stone.
 31,SNEKE_GUARD,40,70,ARMOR,0,5,0,0,0,A suit that's look sneke save you.
 32,STEEL_BUBBLE,50,70,ARMOR,0,7,0,0,0,A strong bubble for protect you.
-33,PAPAYAPOKPOK,5,15,CONSUMABLE,0,0,0,6,0,A fruit that so spicy.
+33,PAPAYAPOKPOK,5,15,CONSUMABLE,0,0,6,0,0,A fruit that so spicy.
 34,GOBLIN_MASK,45,0,ETC,0,0,0,0,0,WHY GOBLIN HAS MASK.
 35,ORC_BONE,50,0,ETC,0,0,0,0,0,Huge bone.
 36,ORC_HEART,70,0,ETC,0,0,0,0,0,Orc will love you.
