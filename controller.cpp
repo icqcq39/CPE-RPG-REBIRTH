@@ -231,5 +231,45 @@ void GAME::BUY(){
 	getch();
 }
 void GAME::SELL(){
+		string cmd;
+		int iItem=0;
 	
+	do{
+		if(getPlayer()->getItemList()->size() != 0){
+		show::printData(core);
+		cout<<"\tWhat do you want to SELL.\n\n";
+		cout<<endl;
+		getPlayer()->showItemList();
+		do{
+			cout<<"\tCOMMAND: ";
+			getline(cin,cmd);
+		}while(!( atoi(cmd.c_str()) >= 0 && atoi(cmd.c_str()) < getPlayer()->getItemList()->size()) );
+		show::printData(core);
+		iItem = atoi(cmd.c_str());
+		cout<<"\n\tAre you sure to sell "<<getPlayer()->getItemList()->at(iItem).getName()<<"?\n";
+		cout<<"\t[1]  YES\n\n";
+		cout<<"\t[2]  NO No.\n\n\n";
+		do{
+			cout<<"\tCOMMAND: ";
+			getline(cin,cmd);
+		}while(!( cmd=="1"||cmd=="2"));
+		if(cmd =="1"){
+			getPlayer()->setGold(getPlayer()->getItemList()->at(iItem).getPS());
+			cout << "\n\tYou got "<<getPlayer()->getItemList()->at(iItem).getPS()<<" Golds. From selling "<<getPlayer()->getItemList()->at(iItem).getName()<<"\t";
+			getPlayer()->delItem(iItem);
+			getch();
+		}
+		}else{
+			cout<<"\n\tYou have nothing to sell.\n";
+			getch();
+		}
+		show::printData(core);
+		cout <<"\tDo you want to sell any things else?\n\n";
+		cout<<"\t[1]  YES\n\n";
+		cout<<"\t[2]  NO, THANKS\n\n\n";
+		cout<<"\tCOMMAND: ";
+		getline(cin,cmd);
+		show::printData(core);
+	}while(!(cmd =="2"));
+	show::printData(core);
 }
