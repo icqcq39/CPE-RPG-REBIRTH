@@ -1,0 +1,14 @@
+//ID,NAME,DMG_FACTOR,HIT_NUMBER,HIT_CHANCE,CRI_CHANCE,CRI_MULTIPILE,DESC
+0,UNKNOW,0,0,0,0,0,Unkown
+1,SLAP,1,1,90,0,1,Slap that bit*h.
+2,STAB,1,1,90,10,1.1,Gimme your back.
+3,BROKEN,0.5,4,90,0,1,Spread damage.
+4,INSURGENT,2,1,80,0,1,Burn baby burn.
+5,HEADSHOOT,1,1,60,2,1,Shoot head.
+6,SLASH,1,1,80,10,1.2,Slash.
+7,SMASH,1,1,80,15,1.3,Watch your head bro.
+8,MAGIC_SHOT,1.2,1,100,15,1.2,An high accuracy attack.
+9,DOUBLE_SLASH,1,2,80,20,1.4,Slash two times.
+10,IAIDO,1,1,90,60,1.75,Quick Slash.
+11,HEAVY_SMASH,1,1,75,5,1.2,Watch your head again bro.
+12,RAIGEKI,1,2,80,10,1.2,slash fast as lightning.
