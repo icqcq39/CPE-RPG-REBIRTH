@@ -14,8 +14,10 @@ battle* Battle;
 int main(){
 	load::loadData();
 	core = new GAME();
-core->getPlayer()->setACode(17);
-core->SHOP();
+//core->getPlayer()->setACode(1);
+//core->getPlayer()->getStat()->setHp(3);
+//core->console();
+//show::printData(core);
 //	show::printLogo();
 //	show::printOver();
 

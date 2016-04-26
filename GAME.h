@@ -35,7 +35,7 @@ class GAME{
 		int eventCheck(int);
 		void engaging();
 		void SHOP();
-		void SAVE();
+		void SAVING();
 		void HOSPITAL();
 		void BUY();
 		void SELL();

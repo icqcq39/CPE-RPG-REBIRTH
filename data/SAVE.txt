@@ -1,0 +1,2 @@
+//ID,NAME,[mainpt,subPt,free,],[atk,def,maxhp,hp,],ACODE,GOLD,[ITEM,],[SKILL,],PASSIVE,WEAPON,ARMOR
+0,UNKNOW,[1,1,0],[10,10,10,10,],1,0,[0,],[0,],0,0,0

@@ -130,7 +130,7 @@ int GAME::eventCheck(int dest){
 		}
 	}
 	if(dest == 16|| dest == 19||dest == 22){
-		this->SAVE();
+		this->SAVING();
 	}
 	if(dest == 17|| dest == 20||dest == 23){
 		this->SHOP();
@@ -160,7 +160,7 @@ bool GAME::start(){
 		cout<<"\tCOMMAND: ";
 		getline(cin,cmd);
 	}while(!(cmd == "1"||cmd =="2"));
-	
+	if(cmd == "1")
 	return true;
 }
 
@@ -192,11 +192,20 @@ void GAME::SHOP(){
 	cout<<"\tThanks for coming.\n";
 	getch();
 }
-void GAME::SAVE(){
+void GAME::SAVING(){
 	
 }
 void GAME::HOSPITAL(){
-	
+	string cmd;
+	show::printData(core);
+	cout<<"\n\tWell Well. Do you still alive.\n";
+	getch();
+	cout<<"\tLay down here. And take this pill\n";
+	getch();
+	show::printData(core);
+	cout<<"\n\t + ";getch();cout<<" + ";getch();cout<<" + ";getch();cout<<" + ";getch();cout<<" + ";getch();cout<<" + \n\n";
+	getPlayer()->getStat()->setHp(getPlayer()->getStat()->getMaxhp());
+	getch();
 }
 void GAME::BUY(){
 	string cmd;
