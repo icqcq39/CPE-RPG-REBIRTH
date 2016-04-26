@@ -218,7 +218,7 @@ void GAME::chapter1(int session){
 			show::printData(core);
 			cout << "\tMayor: You help us a lot. I want to give this to you. \n\tIt's not something important but keep it.";
 			getline(cin,enter);
-			cout << "\tYou got skill: Heal1";
+			cout << "\tYou got skill: Guard";
 			getline(cin,enter);
 			show::printData(core);
 			cout << "\tQuest: Go to the forest\n\tDetail: There will be something going on.";
